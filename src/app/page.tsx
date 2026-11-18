@@ -7,7 +7,7 @@ import VideoFacade from '@/components/home/VideoFacade';
 import WaitlistForm from '@/components/home/WaitlistForm';
 import {
   APP_STORE_URL,
-  SUBSTACK_EMBED_URL,
+  SUBSTACK_SUBSCRIBE_URL,
   SUBSTACK_URL,
 } from '@/lib/links';
 import { getLatestPosts } from '@/lib/substack';
@@ -298,13 +298,28 @@ export default async function Home() {
 
           <FadeInSection delay={0.4}>
             <div className="max-w-md mx-auto text-center">
-              <h3 className="text-xl font-bold mb-4">Follow the Commissioner&apos;s Report</h3>
-              <iframe
-                src={SUBSTACK_EMBED_URL}
-                title="Subscribe to the Commissioner's Report on Substack"
-                loading="lazy"
-                className="w-full h-[150px] rounded-2xl border border-[#2A2A2A]"
-              />
+              <h3 className="text-xl font-bold mb-2">Get the Commissioner&apos;s Report</h3>
+              <p className="text-[#828282] mb-6">New posts straight to your inbox. Free on Substack.</p>
+              <form
+                action={SUBSTACK_SUBSCRIBE_URL}
+                target="_blank"
+                className="flex flex-col sm:flex-row gap-3"
+              >
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email"
+                  aria-label="Email address"
+                  className="flex-1 px-6 py-3 bg-[#2A2A2A] border border-[#3A3A3A] rounded-full text-white placeholder-[#828282] focus:outline-none focus:border-[#00FF87]"
+                />
+                <button
+                  type="submit"
+                  className="bg-[#00FF87] text-[#1E1E1E] px-8 py-3 rounded-full font-bold hover:bg-[#00FF87]/90 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </form>
             </div>
           </FadeInSection>
         </div>

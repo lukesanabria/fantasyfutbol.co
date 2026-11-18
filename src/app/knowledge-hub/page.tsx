@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Get help with Fantasy Fútbol. Contact us, browse FAQs, and find guides in the Knowledge Hub.',
 };
 
-const DISCORD_URL = SOCIAL_LINKS.find((l) => l.icon === 'discord')?.url;
+const SUBSTACK_PROFILE_URL = SOCIAL_LINKS.find((l) => l.icon === 'substack')?.url;
 const X_URL = SOCIAL_LINKS.find((l) => l.icon === 'x')?.url;
 
 const categoryDescriptions: Record<string, string> = {
@@ -67,19 +67,19 @@ export default function KnowledgeHubPage() {
               <div className="text-[#828282] text-xs mt-2">Response within 24–48 hours</div>
             </a>
               <a
-                href={DISCORD_URL}
+                href={SUBSTACK_PROFILE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#2A2A2A] rounded-2xl p-6 hover:bg-[#333333] transition-colors group"
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-[#00FF87] mb-3" aria-hidden="true">
-                  <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z" />
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#00FF87] mb-4" aria-hidden="true">
+                  <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
                 </svg>
-                <div className="font-semibold mb-1">Discord</div>
+                <div className="font-semibold mb-1">Substack</div>
                 <div className="text-[#828282] text-sm group-hover:text-[#00FF87] transition-colors">
-                  Join our community
+                  The Commissioner&apos;s Report
                 </div>
-                <div className="text-[#828282] text-xs mt-2">Chat with the community</div>
+                <div className="text-[#828282] text-xs mt-2">News and game updates</div>
               </a>
             <a
               href={X_URL}
@@ -211,12 +211,6 @@ export default function KnowledgeHubPage() {
               Have ideas to make Fantasy Fútbol better? We're actively developing and want to hear from you.
             </p>
             <ul className="space-y-2 text-[#828282]">
-              <li className="flex items-start gap-2">
-                <span className="text-[#00FF87] mt-0.5">•</span>
-                <span>
-                  <strong className="text-white">Discord:</strong> Share suggestions with the community
-                </span>
-              </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#00FF87] mt-0.5">•</span>
                 <span>
