@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { APP_STORE_URL } from '@/lib/links';
 
 interface ArticleFrontmatter {
   title: string;
@@ -23,13 +24,13 @@ export default function ArticleLayout({ frontmatter, children }: ArticleLayoutPr
   return (
     <div className="bg-[#1E1E1E] text-white min-h-screen">
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-[#1E1E1E]/80 backdrop-blur-md border-b border-[#2A2A2A]">
+      <nav className="sticky top-0 z-50 bg-[#1E1E1E]/95 md:bg-[#1E1E1E]/80 md:backdrop-blur-md border-b border-[#2A2A2A]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold hover:text-[#00FF87] transition-colors">
             Fantasy Fútbol
           </Link>
           <a
-            href="https://apps.apple.com/app/id6755744058"
+            href={APP_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#00FF87] text-[#1E1E1E] px-6 py-2 rounded-full font-semibold hover:bg-[#00FF87]/90 transition-colors text-sm md:text-base"
@@ -99,7 +100,7 @@ export default function ArticleLayout({ frontmatter, children }: ArticleLayoutPr
                 Knowledge Hub
               </Link>
               <a
-                href="https://apps.apple.com/app/id6755744058"
+                href={APP_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
