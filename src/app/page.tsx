@@ -47,7 +47,7 @@ export default async function Home() {
 
             <FadeInSection delay={0.2}>
               <p className="text-xl md:text-2xl text-[#828282] mb-10 max-w-3xl mx-auto lg:mx-0">
-                Draft entire clubs from Europe&apos;s top 5 leagues. Earn points across every competition - leagues, cups, and Champions League nights.
+                Draft entire clubs from Europe&apos;s top 5 leagues. Earn points across every competition: leagues, cups, and Champions League nights.
               </p>
             </FadeInSection>
 
@@ -76,6 +76,7 @@ export default async function Home() {
               <img
                 src={HERO_SCREENSHOT}
                 alt="Fantasy Fútbol app screenshot"
+                fetchPriority="high"
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </PhoneFrame>
@@ -91,7 +92,7 @@ export default async function Home() {
               See it in action.
             </h2>
             <p className="text-[#828282] text-xl mb-12">
-              From draft night to matchday - a tour of the app.
+              From draft night to matchday, here&apos;s a tour of the app.
             </p>
           </FadeInSection>
 
@@ -114,22 +115,34 @@ export default async function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <FadeInSection delay={0.1}>
-              <div className="bg-[#2A2A2A] p-8 rounded-2xl">
-                <div className="text-[#00FF87] text-4xl mb-4">❌</div>
+              <div className="h-full bg-[#2A2A2A] border border-white/5 p-8 rounded-2xl">
+                <div className="flex items-center justify-center w-10 h-10 mb-5 rounded-full bg-red-500/10 text-red-400">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" className="w-5 h-5" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" />
+                  </svg>
+                </div>
                 <p className="text-xl">FPL only covers one league</p>
               </div>
             </FadeInSection>
 
             <FadeInSection delay={0.2}>
-              <div className="bg-[#2A2A2A] p-8 rounded-2xl">
-                <div className="text-[#00FF87] text-4xl mb-4">❌</div>
+              <div className="h-full bg-[#2A2A2A] border border-white/5 p-8 rounded-2xl">
+                <div className="flex items-center justify-center w-10 h-10 mb-5 rounded-full bg-red-500/10 text-red-400">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" className="w-5 h-5" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" />
+                  </svg>
+                </div>
                 <p className="text-xl">Cup matches don&apos;t count anywhere</p>
               </div>
             </FadeInSection>
 
             <FadeInSection delay={0.3}>
-              <div className="bg-[#2A2A2A] p-8 rounded-2xl">
-                <div className="text-[#00FF87] text-4xl mb-4">❌</div>
+              <div className="h-full bg-[#2A2A2A] border border-white/5 p-8 rounded-2xl">
+                <div className="flex items-center justify-center w-10 h-10 mb-5 rounded-full bg-red-500/10 text-red-400">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" className="w-5 h-5" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" />
+                  </svg>
+                </div>
                 <p className="text-xl">You&apos;re drafting players, not teams</p>
               </div>
             </FadeInSection>
@@ -141,16 +154,16 @@ export default async function Home() {
       <section id="how-it-works" className="py-24 px-6 bg-[#171717] scroll-mt-16">
         <div className="max-w-6xl mx-auto">
           <FadeInSection>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
               Simple to learn. Deep to master.
             </h2>
           </FadeInSection>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-6">
             <FadeInSection delay={0.1}>
-              <div className="text-center">
-                <div className="text-[#00FF87] text-8xl font-bold mb-6">1</div>
-                <h3 className="text-2xl font-bold mb-4">Draft Clubs</h3>
+              <div className="h-full bg-[#1E1E1E] border border-white/5 p-8 rounded-2xl">
+                <div className="text-[#00FF87] text-sm font-bold tracking-widest mb-6">01</div>
+                <h3 className="text-2xl font-bold mb-3">Draft Clubs</h3>
                 <p className="text-[#828282] text-lg">
                   Pick teams from all 5 European leagues
                 </p>
@@ -158,9 +171,9 @@ export default async function Home() {
             </FadeInSection>
 
             <FadeInSection delay={0.2}>
-              <div className="text-center">
-                <div className="text-[#00FF87] text-8xl font-bold mb-6">2</div>
-                <h3 className="text-2xl font-bold mb-4">Pick Your Starting 5</h3>
+              <div className="h-full bg-[#1E1E1E] border border-white/5 p-8 rounded-2xl">
+                <div className="text-[#00FF87] text-sm font-bold tracking-widest mb-6">02</div>
+                <h3 className="text-2xl font-bold mb-3">Pick Your Starting 5</h3>
                 <p className="text-[#828282] text-lg">
                   Choose your lineup each week
                 </p>
@@ -168,9 +181,9 @@ export default async function Home() {
             </FadeInSection>
 
             <FadeInSection delay={0.3}>
-              <div className="text-center">
-                <div className="text-[#00FF87] text-8xl font-bold mb-6">3</div>
-                <h3 className="text-2xl font-bold mb-4">Earn Points</h3>
+              <div className="h-full bg-[#1E1E1E] border border-white/5 p-8 rounded-2xl">
+                <div className="text-[#00FF87] text-sm font-bold tracking-widest mb-6">03</div>
+                <h3 className="text-2xl font-bold mb-3">Earn Points</h3>
                 <p className="text-[#828282] text-lg">
                   Win points on match results and goals across every competition
                 </p>
@@ -212,33 +225,21 @@ export default async function Home() {
                 <tbody>
                   <tr className="border-b border-[#2A2A2A]">
                     <td className="py-4 px-4">Team-based drafting</td>
-                    <td className="py-4 px-4 text-center text-[#00FF87] text-2xl">✓</td>
-                    <td className="py-4 px-4 text-center text-[#828282] text-2xl">✗</td>
-                    <td className="py-4 px-4 text-center text-[#828282] text-2xl">✗</td>
+                    <td className="py-4 px-4 text-center text-[#00FF87] text-xl font-bold">✓</td>
+                    <td className="py-4 px-4 text-center text-[#555555] text-xl">✗</td>
+                    <td className="py-4 px-4 text-center text-[#555555] text-xl">✗</td>
                   </tr>
                   <tr className="border-b border-[#2A2A2A]">
                     <td className="py-4 px-4">All 5 leagues</td>
-                    <td className="py-4 px-4 text-center text-[#00FF87] text-2xl">✓</td>
-                    <td className="py-4 px-4 text-center text-[#828282] text-2xl">✗</td>
-                    <td className="py-4 px-4 text-center text-[#828282] text-2xl">✗</td>
+                    <td className="py-4 px-4 text-center text-[#00FF87] text-xl font-bold">✓</td>
+                    <td className="py-4 px-4 text-center text-[#555555] text-xl">✗</td>
+                    <td className="py-4 px-4 text-center text-[#555555] text-xl">✗</td>
                   </tr>
                   <tr className="border-b border-[#2A2A2A]">
                     <td className="py-4 px-4">Cups & European tournaments</td>
-                    <td className="py-4 px-4 text-center text-[#00FF87] text-2xl">✓</td>
-                    <td className="py-4 px-4 text-center text-[#828282] text-2xl">✗</td>
-                    <td className="py-4 px-4 text-center text-[#828282] text-2xl">✗</td>
-                  </tr>
-                  <tr className="border-b border-[#2A2A2A]">
-                    <td className="py-4 px-4">Weekly squad strategy</td>
-                    <td className="py-4 px-4 text-center text-[#00FF87] text-2xl">✓</td>
-                    <td className="py-4 px-4 text-center text-[#828282] text-2xl">✗</td>
-                    <td className="py-4 px-4 text-center text-[#828282] text-2xl">✗</td>
-                  </tr>
-                  <tr className="border-b border-[#2A2A2A]">
-                    <td className="py-4 px-4">Multi-competition scoring</td>
-                    <td className="py-4 px-4 text-center text-[#00FF87] text-2xl">✓</td>
-                    <td className="py-4 px-4 text-center text-[#828282] text-2xl">✗</td>
-                    <td className="py-4 px-4 text-center text-[#828282] text-2xl">✗</td>
+                    <td className="py-4 px-4 text-center text-[#00FF87] text-xl font-bold">✓</td>
+                    <td className="py-4 px-4 text-center text-[#555555] text-xl">✗</td>
+                    <td className="py-4 px-4 text-center text-[#555555] text-xl">✗</td>
                   </tr>
                 </tbody>
               </table>
@@ -267,7 +268,7 @@ export default async function Home() {
                     href={post.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col h-full bg-[#2A2A2A] p-8 rounded-2xl hover:bg-[#333333] transition-colors"
+                    className="flex flex-col h-full bg-[#2A2A2A] border border-white/5 p-8 rounded-2xl hover:bg-[#333333] hover:border-[#00FF87]/20 transition-colors"
                   >
                     {post.date && (
                       <time className="text-sm text-[#828282] mb-3">{post.date}</time>
@@ -317,7 +318,7 @@ export default async function Home() {
               Join the community.
             </h2>
             <p className="text-[#828282] text-xl mb-12">
-              Banter, highlights, and game updates - wherever you hang out.
+              Banter, highlights, and game updates, wherever you hang out.
             </p>
           </FadeInSection>
 

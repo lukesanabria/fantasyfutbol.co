@@ -1,11 +1,15 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { articles, categories, getArticlesByCategory } from '@/lib/articles';
+import { APP_STORE_URL, SOCIAL_LINKS } from '@/lib/links';
 
 export const metadata: Metadata = {
   title: 'Support — Fantasy Fútbol',
   description: 'Get help with Fantasy Fútbol. Contact us, browse FAQs, and find guides in the Knowledge Hub.',
 };
+
+const DISCORD_URL = SOCIAL_LINKS.find((l) => l.icon === 'discord')?.url;
+const X_URL = SOCIAL_LINKS.find((l) => l.icon === 'x')?.url;
 
 const categoryDescriptions: Record<string, string> = {
   'Getting Started': 'New to the game? Start here.',
@@ -17,13 +21,13 @@ export default function KnowledgeHubPage() {
   return (
     <div className="bg-[#1E1E1E] text-white min-h-screen">
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-[#1E1E1E]/80 backdrop-blur-md border-b border-[#2A2A2A]">
+      <nav className="sticky top-0 z-50 bg-[#1E1E1E]/95 md:bg-[#1E1E1E]/80 md:backdrop-blur-md border-b border-[#2A2A2A]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold hover:text-[#00FF87] transition-colors">
             Fantasy Fútbol
           </Link>
           <a
-            href="https://apps.apple.com/app/id6755744058"
+            href={APP_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#00FF87] text-[#1E1E1E] px-6 py-2 rounded-full font-semibold hover:bg-[#00FF87]/90 transition-colors text-sm md:text-base"
@@ -53,7 +57,9 @@ export default function KnowledgeHubPage() {
               href="mailto:hello@fantasyfutbol.co"
               className="bg-[#2A2A2A] rounded-2xl p-6 hover:bg-[#333333] transition-colors group"
             >
-              <div className="text-[#00FF87] text-2xl mb-3">✉</div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-[#00FF87] mb-3" aria-hidden="true">
+                <path d="M4 6h16v12H4zM4 7l8 6 8-6" />
+              </svg>
               <div className="font-semibold mb-1">Email</div>
               <div className="text-[#828282] text-sm group-hover:text-[#00FF87] transition-colors">
                 hello@fantasyfutbol.co
@@ -61,12 +67,14 @@ export default function KnowledgeHubPage() {
               <div className="text-[#828282] text-xs mt-2">Response within 24–48 hours</div>
             </a>
               <a
-                href="https://discord.gg/cMwr7ZNB2v"
+                href={DISCORD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#2A2A2A] rounded-2xl p-6 hover:bg-[#333333] transition-colors group"
               >
-                <div className="text-[#00FF87] text-2xl mb-3">💬</div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-[#00FF87] mb-3" aria-hidden="true">
+                  <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z" />
+                </svg>
                 <div className="font-semibold mb-1">Discord</div>
                 <div className="text-[#828282] text-sm group-hover:text-[#00FF87] transition-colors">
                   Join our community
@@ -74,13 +82,15 @@ export default function KnowledgeHubPage() {
                 <div className="text-[#828282] text-xs mt-2">Chat with the community</div>
               </a>
             <a
-              href="https://x.com/fantfutbol"
+              href={X_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#2A2A2A] rounded-2xl p-6 hover:bg-[#333333] transition-colors group"
             >
-              <div className="text-[#00FF87] text-2xl mb-3">🐦</div>
-              <div className="font-semibold mb-1">Twitter</div>
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#00FF87] mb-4" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              <div className="font-semibold mb-1">X</div>
               <div className="text-[#828282] text-sm group-hover:text-[#00FF87] transition-colors">
                 @fantfutbol
               </div>
@@ -210,7 +220,7 @@ export default function KnowledgeHubPage() {
               <li className="flex items-start gap-2">
                 <span className="text-[#00FF87] mt-0.5">•</span>
                 <span>
-                  <strong className="text-white">Twitter:</strong> Follow @fantfutbol
+                  <strong className="text-white">X:</strong> Follow @fantfutbol
                 </span>
               </li>
               <li className="flex items-start gap-2">
@@ -256,7 +266,7 @@ export default function KnowledgeHubPage() {
                 Knowledge Hub
               </Link>
               <a
-                href="https://apps.apple.com/app/id6755744058"
+                href={APP_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"

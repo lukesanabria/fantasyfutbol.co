@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "./",
   },
-  title: "Fantasy Fútbol - Fantasy Soccer, Finally Done Right",
-  description: "Draft entire clubs from Europe's top 5 leagues. Earn points across every competition — leagues, cups, and Champions League nights.",
+  title: "Fantasy Fútbol: Fantasy Soccer, Finally Done Right",
+  description: "Draft entire clubs from Europe's top 5 leagues. Earn points across every competition: leagues, cups, and Champions League nights.",
 };
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
